@@ -1,0 +1,403 @@
+@import "normalize";
+@import "layout";
+@import "slick";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+@font-face {
+   font-family: 'Gotham';
+   src: url('../fonts/gotham_medium_regular-webfont.woff2') format('woff2'),
+        url('../fonts/gotham_medium_regular-webfont.woff') format('woff');
+   font-weight: 500;
+   font-style: normal;
+
+}
+@font-face {
+   font-family: 'Gotham';
+   src: url('../fonts/Gotham-Book.woff2') format('woff2'),
+       url('../fonts/Gotham-Book.woff') format('woff');
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Gotham';
+   src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+       url('../fonts/Gotham-Bold.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+}
+
+
+body{
+	font-family: "Open Sans";
+	color:  rgba(74, 85, 98, 0.5);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 30px;
+	
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	padding: 0;
+	margin: 0;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+
+
+
+
+.ba-socials{
+	padding-left: 70px;
+	a{
+		display: inline-block;
+		text-decoration: none;
+		width: 40px;
+		height: 40px;
+		color:#fff;
+		border:2px solid currentColor;
+		border-radius:50%;
+		fill:currentColor;
+		line-height: 40px;
+		text-align: center;
+		
+		&:hover{
+			color:#000;
+		}
+
+	}
+}
+
+.ba-slider {
+	position: relative;
+	&__slide {
+		color: #FFF;
+		background: 50%;
+		background-size: cover;
+		.ba-container {
+			min-height: 100vh;
+			padding: 100px 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			h2{
+				font-family: Gotham;
+				color:  #ffffff;
+				font-size: 80px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-align: center;
+			}
+			p{
+			font-family: Gotham;
+			color:  #ffffff;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 22px;
+			text-align: center;
+			padding-top: 35px;
+			text-transform: uppercase;
+			letter-spacing: 0.025;
+			}
+			a{
+				display: block;
+				position: absolute;
+				right: 50%;
+				top: 50%;
+				img{
+					display: block;
+				}
+			}
+		}
+
+
+
+	}
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		border: none;
+		background: none;
+		font-size: 0;
+		background: no-repeat 50%;
+		width: 23px;
+		height: 42px;
+		outline: none;
+		margin: -21px 20px 0;
+	}
+	
+	.slick-dots {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		bottom: 40px;
+		width: 100%;
+		li {
+			display: inline-block;
+			button {
+				border: none;
+				background: none;
+				font-size: 0;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: rgba(#fff, 80%);
+				margin: 0 10px;
+				&:hover {
+					background: rgba(#fff, 100%);
+					outline: none;
+
+				}
+			}
+			&.slick-active {
+				button {
+					background: blue;
+				}
+			}
+		}
+	}
+}
+.ba-header{
+	position:absolute;
+	z-index: 1;
+	display: flex;
+    align-items: center;
+    padding: 50px 0 50px 0 ;
+    justify-content: space-between;
+}
+.ba-menu{
+    display: flex;
+    margin: 0 0 38px;
+    padding: 0;
+    list-style: none;
+    a{
+        display: block;
+        padding: 62px 25px 24px 70px;
+        text-decoration: none;
+        font-family: Gotham;
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 22px;
+		text-transform: uppercase;
+        
+        &:hover, &:focus, &.ba-active{
+            
+            color: #000;
+           
+        }
+    }
+}
+.ba-wedo__content{
+	padding-top: 140px;
+}
+.ba-wedo__title{
+	padding-bottom: 170px;
+	font-family: Gotham;
+	color:  #2c4058;
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ba-wedo__flexy{
+	display: flex;
+	.ba-wedo__img{
+		width: 100%;
+		img{
+			width: 100%;
+			
+			display: block;
+			box-shadow:-200px -90px 0 #55b7ff;;
+		}
+	}
+	.ba-wedo__trade{
+		padding: 56px 0 64px 70px;
+		p{
+			padding-top: 56px;
+		}
+		.ba-wedo__suptitle{
+			font-family: Gotham;
+			color:  #2c4058;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 24px;
+			text-align: left;
+			text-transform: uppercase;
+		}
+		.ba-wedo__titletrade{
+			font-family: Gotham;
+			color:  #2c4058;
+			font-size: 44px;
+			font-weight: 700;
+			line-height: 1;
+			text-align: left;
+			text-transform: uppercase;
+			padding: 18px 0 0px 0;
+		}
+		.ba-wedo__text{
+			padding-bottom: 30px;
+		}
+		.ba-button{
+			display: inline-block;
+			font-family: Gotham;
+			color:  #2c4058;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 48px;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 0 20px;
+			border-width: 1px;
+			border-color:  #2c4058;
+			border-style: solid;
+			width: 188px;
+			&:hover{
+				color: #fff ;
+				background-color:#2c4058;
+				
+			}
+						
+		}
+	}
+}
+.ba-p{
+	font-family: Open Sans;
+color:  #2c4058;
+font-size: 18px;
+font-style: italic;
+line-height: 30px;
+text-align: left;
+
+}
+
+// Commerce
+
+.ba-commerce__img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	box-shadow: 200px -90px 0  #7e5aff;;
+}
+.ba-news{
+	background: #fff url('../img/news-bg.jpg') no-repeat center;
+	color: #fff;
+	background-size: cover;
+}
+.ba-latest__title{
+	font-family: Gotham;
+color:  #ffffff;
+font-size: 44px;
+font-weight: 500;
+line-height: 1;
+text-align: center;
+text-transform: uppercase;
+padding-bottom: 92px;
+}
+
+.ba-latest{
+	padding: 170px 0 125px 0;
+}
+.ba-slider{
+	
+	
+}
+
+
+.ba-pictures{
+	padding: 150px 0 100px 0;
+}
+
+.ba-pictures__title{
+	font-family: Gotham;
+color:  #2c4058;
+font-size: 44px;
+font-weight: 500;
+line-height: 1;
+text-align: center;
+text-transform: uppercase;
+padding-bottom: 92px;
+}
+.ba-map{
+	min-height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
