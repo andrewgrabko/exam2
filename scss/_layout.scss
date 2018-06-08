@@ -20,7 +20,7 @@
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 html {
@@ -117,10 +117,10 @@ body, html {
     clear: both;
 }
 .ba-row + .ba-row{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .ba-row{
-    margin-left: -30px;
+    margin-left: -10px;
 }
 
 .ba-row--collapse {
@@ -135,7 +135,10 @@ body, html {
 
 .ba-row > [class*="ba-col-"]{
     float: left;
-    padding-left: 30px;
+    padding-left: 10px;
+}
+[class*="ba-col-"] img{
+    display: block;
 }
 .ba-col-12{
     width: 100%;
@@ -172,4 +175,10 @@ body, html {
 }
 .ba-col-1{
     width: 8.3334%;
+}
+.ba-col-61{
+    width: 5%;
+}
+.ba-col-62{
+    width: 48%;
 }
